@@ -1,0 +1,20 @@
+
+This is a simple Todos application where users can sign up, log in, and manage their todo tasks.
+
+## Features
+
+- User Authentication: Users can create an account and log in securely.
+- Create Todos: Users can create new todo tasks with a title and description.
+- Delete Todos: Users can delete their existing todo tasks.
+
+## Technologies Used
+
+- Frontend:
+  - HTML, CSS, JavaScript
+  - React.js (JavaScript library for building user interfaces)
+
+## Backend
+ the backend will be running at 
+
+http://localhost:9292
+

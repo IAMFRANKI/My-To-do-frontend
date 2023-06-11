@@ -1,5 +1,5 @@
 import { createContext, useState } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, Link, createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
@@ -14,11 +14,23 @@ function App() {
     setUser(null);
   };
 
+  const route = ([
+    {
+      path: '/',
+      element: <Login/>
+    },
+    {
+      path: '/todo',
+      element: <Todo/>
+    }
+  ])
+
   return (
     <UserContext.Provider value={{ user, setUser, logOut }}>
+     
       <Routes>
-        <Route path="/Todo" element={<Todo />} />
-        <Route path="/Login" element={<Login />} />
+        <Route path="/" element={<Todo />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/Signup" element={<Signup />} />
       </Routes>
     </UserContext.Provider>

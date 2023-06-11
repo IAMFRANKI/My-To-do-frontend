@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { UserContext } from '../App';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
   const { user, setUser } = useContext(UserContext);
@@ -22,6 +23,7 @@ const Login = () => {
   }
   function handleSubmit(event) {
     event.preventDefault();
+    alert ("JKNJBB")
     fetch('http://localhost:9292/login', {
       method: 'PATCH',
       body: JSON.stringify(formData),
@@ -70,7 +72,11 @@ const Login = () => {
           onChange={handleChange}
         />
       </div>
-      <button className="btn">Login</button>
+        <button className="btn">
+          Login
+        </button>
+        
+      
       <p style={{ color: 'black', fontWeight: '300', marginTop: '30px' }}>
         Have an account?{' '}
         <span
